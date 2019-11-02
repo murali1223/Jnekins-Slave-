@@ -34,7 +34,8 @@
   
 # Configure the Slave using Manage Jenkins    
     Configure the node as shown here Manage Jenkins > Manage Nodes > New Node Jenkins Master and Slave Configuration
-    
+    Note:   Copy slave public id and paste in configuration box
+     
 # Test Jenkins Jobs
    1) Create “new item”
       Enter an item name – My-First-Project
