@@ -20,7 +20,7 @@
     cd .ssh
     cat id_rsa.pub > authorized_keys  #((Master node is communicating with slave node by using publickey... and slave node is 
                                          using one of the authorixed_keys)
-    chmod 700 authorized_keys         #(( And giving permisssions to authorized keys only admin user))
+    chmod 700 authorized_keys         #(( And giving permisssions to authorized keys only jenkins user))
     
     
 # Configuration on Master
@@ -28,8 +28,8 @@
   cd /var/lib/jenkins/.ssh
   ssh-keyscan -H SLAVE-NODE-IP-OR-HOSTNAME >>/var/lib/jenkins/.ssh/known_hosts
 # ssh-keyscan -H 172.31.38.42 >>/var/lib/jenkins/.ssh/known_hosts
-  chown jenkins:jenkins known_hosts
-  chmod 700 known_hosts
+  chown jenkins:jenkins known_hosts  #(( By using this giving permissions to root user to jenkins user))
+  chmod 700 known_hosts              #(( Only jenkins user can acess this file pemissions))
   
   
 # Configure the Slave using Manage Jenkins    
