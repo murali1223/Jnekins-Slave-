@@ -27,7 +27,9 @@
   mkdir -p /var/lib/jenkins/.ssh
   cd /var/lib/jenkins/.ssh
   ssh-keyscan -H SLAVE-NODE-IP-OR-HOSTNAME >>/var/lib/jenkins/.ssh/known_hosts
-# ssh-keyscan -H 172.31.38.42 >>/var/lib/jenkins/.ssh/known_hosts
+# ssh-keyscan -H 172.31.38.42 >>/var/lib/jenkins/.ssh/known_hosts    #((ssh-keyscan is a utility for gathering the public ssh host 
+                                                                        keys of a number of hosts. It was designed to aid in building 
+                                                                        and verifying ssh_known_hosts files.))#
   chown jenkins:jenkins known_hosts  #(( By using this giving permissions to root user to jenkins user))
   chmod 700 known_hosts              #(( Only jenkins user can acess this file pemissions))
   
